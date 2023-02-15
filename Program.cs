@@ -1,79 +1,44 @@
-﻿using System.Net;
+﻿using System.Collections.Generic;
+using System.Net;
+using System.Reflection;
 
 namespace CodeWars
 {
+    public delegate int[] Arrat(int[] arr);
+
+    public delegate void Not(int[] arr);
+
     internal class Program
     {
-        static void Swap(ref int e1, ref int e2)
+        public static void Swap(ref int e1, ref int e2)
         {
             var temp = e1;
             e1 = e2;
             e2 = temp;
         }
-        static int[] Sort(int[] arr)
-        {
-            for (int i = 0; i < arr.Length; i++)
-            {
-                for (int j = 0; j < arr.Length - 1; j++)
-                {
-                    if (arr[j] > arr[j + 1])
-                    {
-                        Swap(ref arr[j], ref arr[j + 1]);
-                    }
-                }
-            }
-            return arr;
-        }
+
+        // func - prinyal / otdal
+
+        // Action - sdelal
 
 
         static void Main(string[] args)
         {
-            Console.WriteLine("How much numbers y'll write?");
-            int length = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Write nums");
-            int[] arr = new int[length];
-            int First = 0;
-            int Last = length - 1;
-            int middle = 0;
 
-            for (int i =0; i < length ;i++)
-            {
-                arr[i] = Int32.Parse( Console.ReadLine() );
-            }
-            // SORT
-            Sort(arr);
 
-            Console.WriteLine("\nYour sorted array:");
-            for (int i = 0; i<arr.Length; i++)
-            {
-                Console.Write($"arr[{i}] = " + arr[i] + ", ");
-            }
-            int find = -9999;
-            while (find <0 || find > 9999)
-            {
-                try
-                {
-                    Console.WriteLine("\nEnter num from arr");
-                    find = Int32.Parse(Console.ReadLine());
-                }
-                catch
-                {
-                    continue;
-                }
-            }
-            while (arr[middle] != find)
-            {
-                middle = (First + Last) / 2;
-                if ( find < arr[middle])
-                {
-                    Last = middle - 1;
-                }
-                else if (find > arr[middle])
-                {
-                    First = middle + 1;
-                }
-            }
-            Console.WriteLine("Position entered num " + find + " - " + middle);
+            // Enter Array
+            int[] arr = WorkArrays.EnterArr();
+
+            // Delegates
+            Arrat bebra = new Arrat(WorkArrays.Sort);
+            Not bebra2 = new Not(BinarySearch.Search);
+
+            // sort + write arr
+            bebra += WorkArrays.WriteArray;
+            bebra(arr);
+            // BinarySearch
+            bebra2(arr);
+
             Console.ReadKey();
         }
     }

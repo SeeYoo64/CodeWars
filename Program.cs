@@ -26,20 +26,6 @@ namespace CodeWars
         static void Main(string[] args)
         {
 
-
-            // Enter Array
-            int[] arr = WorkArrays.EnterArr();
-
-            // Delegates
-            Arrat bebra = new Arrat(WorkArrays.Sort);
-            Not bebra2 = new Not(BinarySearch.Search);
-
-            // sort + write arr
-            bebra += WorkArrays.WriteArray;
-            bebra(arr);
-            // BinarySearch
-            bebra2(arr);
-
             Console.ReadKey();
         }
     }

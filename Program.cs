@@ -27,7 +27,7 @@ namespace CodeWars
         {
 
             Console.ReadKey();
-            Console.WriteLine("Stas kq");
+            Console.WriteLine("Stas bye bye " );
         }
     }
 }

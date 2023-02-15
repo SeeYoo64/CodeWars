@@ -24,7 +24,7 @@ namespace CodeWars
 
         static void Main(string[] args)
         {
-
+           
 
             // Enter Array
             int[] arr = WorkArrays.EnterArr();

@@ -39,6 +39,7 @@ namespace CodeWars
             // BinarySearch
             bebra2(arr);
 
+            // asdasdasd aada sda
             Console.ReadKey();
         }
     }

@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Net;
 using System.Reflection;
 using CodeWars.ComponentsForWorkWithArray;
+using CodeWars.Builders;
 
 namespace CodeWars
 {
@@ -18,12 +19,14 @@ namespace CodeWars
 
         static void Main(string[] args)
         {
-            WorkArrays workArrays = new WorkArrays(
-                WriterOnConsole.WriteArray,
-                ConsoleReader.EnterArr,
-                Sorters.Sort,
-                SearchEngins.BinarySearch
-                );
+            WorkArrays workArrays = new WorkArraysBuilders()
+                 .SetGetArray(ConsoleReader.EnterArr)
+                 .SetWriter(WriterOnConsole.WriteArray)
+                 .SetSorter(Sorters.Sort)
+                 .SetSercher(SearchEngins.BinarySearch)
+                 .Build();
+
+            workArrays.OperationsOverArray();
 
         }
     }

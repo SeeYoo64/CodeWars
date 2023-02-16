@@ -22,9 +22,9 @@ namespace CodeWars
                     Console.WriteLine("\nEnter num from arr");
                     find = Int32.Parse(Console.ReadLine());
                     if (Array.Exists(arr, element => element == find)) ;
-                    else throw new ExceptionNotExistInArray("Your num doesnt exist in arr");
+                    else throw new Exception("Your num doesnt exist in arr");
                 }
-                catch (ExceptionNotExistInArray e)
+                catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
                     continue;

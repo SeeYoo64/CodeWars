@@ -5,9 +5,6 @@ using CodeWars.ComponentsForWorkWithArray;
 
 namespace CodeWars
 {
-    public delegate int[] Arrat(int[] arr);
-
-    public delegate void Not(int[] arr);
 
     internal class Program
     {
@@ -16,18 +13,17 @@ namespace CodeWars
             var temp = e1;
             e1 = e2;
             e2 = temp;
-        }
-
-        // func - prinyal / otdal
-
-        // Action - sdelal
-
+        }       
 
         static void Main(string[] args)
         {
+            WorkArrays workArrays = new WorkArrays(
+                WriterOnConsole.WriteArray,
+                ConsoleReader.EnterArr,
+                Sorter.Sort,
+                BinarySearch.Search);
 
-            Console.ReadKey();
-            Console.WriteLine("Stas bye bye " );
+            workArrays.OperationsOverArray();
         }
     }
 }

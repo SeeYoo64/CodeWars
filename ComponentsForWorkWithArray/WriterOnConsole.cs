@@ -10,7 +10,7 @@ namespace CodeWars.ComponentsForWorkWithArray
     {
         public static  void WriteArray(int[] arr)
         {
-            Console.WriteLine("\nYour sorted array:");
+            Console.WriteLine("\nYour array:");
             for (int i = 0; i < arr.Length; i++)
             {
                 Console.Write($"arr[{i}] = " + arr[i] + ", ");

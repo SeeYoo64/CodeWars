@@ -33,11 +33,20 @@
         /// </summary>
         public void OperationsOverArray()
         {
-          
+            if (CheckingDelegatesNotNullContent())
+            {
+                Array = GetArray.Invoke();
+                Writer.Invoke(Array);
+                Array = Sorter.Invoke(Array);
+                Writer.Invoke(Array);
+                Searcher.Invoke(Array);
+            }
+            else return;
+
         }
 
         /// <summary>
-        /// Метод который проверяет делегаты на содержание null
+        /// Метод который проверяет делегаты на содержание не null
         /// </summary>
         /// <exception cref="NullReferenceException"></exception>
         private bool CheckingDelegatesNotNullContent()

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Globalization;
 using System.Net;
 using System.Reflection;
 using CodeWars.ComponentsForWorkWithArray;
@@ -17,7 +18,13 @@ namespace CodeWars
 
         static void Main(string[] args)
         {
-          
+            WorkArrays workArrays = new WorkArrays(
+                WriterOnConsole.WriteArray,
+                ConsoleReader.EnterArr,
+                Sorters.Sort,
+                SearchEngins.BinarySearch
+                );
+
         }
     }
 }

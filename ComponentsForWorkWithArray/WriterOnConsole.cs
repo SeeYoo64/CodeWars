@@ -8,14 +8,13 @@ namespace CodeWars.ComponentsForWorkWithArray
 {
     internal class WriterOnConsole
     {
-        public static int[] WriteArray(int[] arr)
+        public static  void WriteArray(int[] arr)
         {
             Console.WriteLine("\nYour sorted array:");
             for (int i = 0; i < arr.Length; i++)
             {
                 Console.Write($"arr[{i}] = " + arr[i] + ", ");
-            }
-            return arr;
+            }         
         }
     }
 }

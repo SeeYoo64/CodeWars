@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CodeWars
 {
-    public class BinarySearch
+    public class SearchEngins
     {
-        public static void Search(int[] arr)
+        public static void BinarySearch(int[] arr)
         {
             int First = 0;
             int Last = arr.Length - 1;
@@ -46,5 +46,7 @@ namespace CodeWars
 
             Console.WriteLine("Position entered num " + find + " - " + middle);
         }
+
+
     }
 }

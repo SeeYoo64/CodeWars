@@ -20,8 +20,9 @@ namespace CodeWars
             WorkArrays workArrays = new WorkArrays(
                 WriterOnConsole.WriteArray,
                 ConsoleReader.EnterArr,
-                Sorter.Sort,
-                BinarySearch.Search);
+                Sorters.Sort,
+                SearchEngins.BinarySearch);
+
 
             workArrays.OperationsOverArray();
         }

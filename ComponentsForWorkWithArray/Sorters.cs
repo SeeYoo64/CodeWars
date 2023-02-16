@@ -1,6 +1,6 @@
 ﻿namespace CodeWars.ComponentsForWorkWithArray
 {
-    public class Sorter
+    public class Sorters
     {
         public static int[] Sort(int[] arr)
         {
@@ -16,5 +16,7 @@
             }
             return arr;
         }
+
+
     }
 }

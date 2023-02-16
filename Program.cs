@@ -17,14 +17,7 @@ namespace CodeWars
 
         static void Main(string[] args)
         {
-            WorkArrays workArrays = new WorkArrays(
-                WriterOnConsole.WriteArray,
-                ConsoleReader.EnterArr,
-                Sorters.Sort,
-                SearchEngins.BinarySearch);
-
-
-            workArrays.OperationsOverArray();
+          
         }
     }
 }
